@@ -1,0 +1,22 @@
+# joystick.kv
+
+BoxLayout:
+    orientation: 'horizontal'
+    spacing: 10
+    padding: 10
+
+    AnalogStick:
+        id: analog_stick
+
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+
+        # ... Outros widgets e botões
+
+        Button:
+            text: '✕'
+            font_size: '20sp'
+            background_normal: ''
+            color: 1, 1, 1, 1
+            on_press: app.send_command(self.text)
